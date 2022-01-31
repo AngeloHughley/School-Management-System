@@ -201,7 +201,7 @@ public class SearchStudent extends javax.swing.JFrame {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/schoolmanagementsys","root","iliketurtles");
             Statement state = (Statement) con.createStatement();
-            String sql = "DELETE FROM `student_info` WHERE Student8ID=" +studentID; //Delete student in database
+            String sql = "DELETE FROM `student_info` WHERE StudentID=" +studentID; //Delete student in database
             PreparedStatement ps = con.prepareStatement(sql);
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null, "Student removed");
